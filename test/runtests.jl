@@ -10,4 +10,5 @@ using Flux, LinearAlgebra
     lossfn(model,x;target=nothing) = Flux.mse(model(x),target)
     res = importance(model,lossfn,X,target=Y)
     @test length(res) == 4
+    @test typeof(res) == Vector{Float32}
 end
