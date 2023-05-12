@@ -1,6 +1,6 @@
 using FeatureImportance
 using Test
-using Flux, Random, LinearAlgebra
+using Flux, LinearAlgebra
 
 @testset "FeatureImportance.jl" begin
     X = randn(4,100)
