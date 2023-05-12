@@ -1,7 +1,7 @@
 module FeatureImportance
-
+using Reexport
 # Write your package code here.
-using Random
+@reexport using Random
 
 function importance(model, loss, features; iters=10, seed = 1234, target = nothing)
     features = convert(Matrix{Float32}, features)
